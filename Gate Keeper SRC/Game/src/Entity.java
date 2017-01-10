@@ -1,4 +1,4 @@
- import java.awt.Graphics2D;
+import java.awt.Graphics2D;
 
 public class Entity {
 	
@@ -10,13 +10,5 @@ public class Entity {
 	this.y = y;
 		
 	}
+}
 	
-	public void update() {
-		
-	}
-	
-	public void draw(Graphics2D g2D) {
-		
-	}
-
-	}

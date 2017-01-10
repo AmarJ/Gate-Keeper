@@ -10,6 +10,7 @@ public class main {
 		frame.setResizable(false);
 		frame.getContentPane().setBackground(Color.BLACK);
 		frame.add(new Game_Frame());
+		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
 

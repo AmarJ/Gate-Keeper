@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 public class Player extends Entity {
 
@@ -17,7 +18,6 @@ public class Player extends Entity {
 	
 	public void update() {
 		x += velX;
-		
 		checkCollisions();
 	}
 	
@@ -61,6 +61,7 @@ public class Player extends Entity {
 			Enemy tempEnemy = enemies.get(i);
 			
 			if (getBounds().intersects(tempEnemy.getBounds())) {
+				JOptionPane.showMessageDialog(null, "Sorry, you lost. Better luck next time.");
 				System.exit(0);
 			}
 		}

@@ -17,7 +17,6 @@ public class Enemy extends Entity {
 	  
 	public void update() {
 		y += 1;
-		checkCollisions1();
 		checkCollisions();
 		checkOffScreen();
 		
@@ -32,18 +31,6 @@ public class Enemy extends Entity {
 		ImageIcon ic = new ImageIcon("images/enemy.png");
 		return ic.getImage();
 		
-	}
-	
-	public void checkCollisions1() {
-		ArrayList<wall> walls = Game_Frame.getwallList();
-		
-		for (int i = 0; i < wall.size; i++) {
-			wall tempwall = walls.get(i);
-			
-			if (getBounds().intersects(tempwall.getBounds())) {
-				System.exit(i);
-			}
-		}			
 	}
 			
 	public void checkCollisions() {

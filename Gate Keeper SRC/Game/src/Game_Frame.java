@@ -45,10 +45,8 @@ public class Game_Frame extends JPanel implements ActionListener {
 		super.paint(g);
 		Graphics2D g2d = (Graphics2D) g;
 		
-		
 		player.draw(g2d);
 		wall.draw(g2d);
-	
 		
 		for (int i = 0; i < enemies.size(); i++) {
 			Enemy tempEnemy = enemies.get(i);

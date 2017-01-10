@@ -13,7 +13,6 @@ public class Player extends Entity {
 	
 	public Player(int x, int y) {
 		super(x, y);
-	
 	}
 	
 	public void update() {
@@ -41,11 +40,10 @@ public class Player extends Entity {
 		} else if (key == KeyEvent.VK_D) {
 			velX = speed;
 		} else if (key == KeyEvent.VK_SPACE) {
-			Game_Frame.addmissile(new missile(x, y));
-			}
+			Game_Frame.addmissile(new missile(x, y));  
+		}
 	}
 
-		
 	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
 		
@@ -53,7 +51,6 @@ public class Player extends Entity {
 			velX = 0;
 		} else if (key == KeyEvent.VK_D) {
 			velX = 0;
-			
 		} 
 	}
 	
@@ -65,7 +62,6 @@ public class Player extends Entity {
 			
 			if (getBounds().intersects(tempEnemy.getBounds())) {
 				System.exit(0);
-				
 			}
 		}
 	}
@@ -75,7 +71,6 @@ public class Player extends Entity {
 				getPlayerImg().getHeight(null));
 		
 	}
-
 }
 
 

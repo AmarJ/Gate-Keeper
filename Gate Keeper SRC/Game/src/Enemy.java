@@ -25,11 +25,11 @@ public class Enemy extends Entity {
 	
 	public void draw(Graphics2D g2d) {
 		g2d.drawImage(getEnemyImg(), x, y, null);
-		g2d.draw(getBounds());
+		//g2d.draw(getBounds());
 	}
 	
 	public Image getEnemyImg() {
-		ImageIcon ic = new ImageIcon("images/zombie.png");
+		ImageIcon ic = new ImageIcon("images/enemy.png");
 		return ic.getImage();
 		
 	}

@@ -19,7 +19,7 @@ public class missile extends Entity {
 	}
 	
 	public Image getmissileImg() {
-		ImageIcon ic = new ImageIcon("images/dynamite.png");
+		ImageIcon ic = new ImageIcon("images/bullet.gif");
 		return ic.getImage();
 	}
 

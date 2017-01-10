@@ -146,7 +146,7 @@ public static ArrayList<wall> getwallList() {
 		if (enemies.size() == 0) {
 			enemies.clear();
 			missiles.clear();
-			JOptionPane.showMessageDialog(null, "You just Won Level" + level + ". Congradulations! Moving on to next level...");
+			JOptionPane.showMessageDialog(null, "You just Won Level " + level + ". Congradulations! Moving on to next level...");
 			level++;
 			startgame();
 			

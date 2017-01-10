@@ -40,7 +40,7 @@ public class Player extends Entity {
 		} else if (key == KeyEvent.VK_D) {
 			velX = speed;
 		} else if (key == KeyEvent.VK_SPACE) {
-			Game_Frame.addmissile(new missile(x, y));  
+			Game_Frame.addmissile(new missile(x+26, y));  
 		}
 	}
 

@@ -37,7 +37,7 @@ public class Game_Frame extends JPanel implements ActionListener {
 		
 		startgame();
 		
-		}
+	}
 				
 	public void paint(Graphics g) {
 		super.paint(g);
@@ -53,90 +53,67 @@ public class Game_Frame extends JPanel implements ActionListener {
 		
 		for (int i = 0; i <missiles.size(); i++) {
 			missile m = missiles.get(i);
-		    m.draw(g2d);
-		    	    
+		    m.draw(g2d);  	    
 		}
 	}
 
 	public static ArrayList<wall> getwalList() {
 		return walls;
-	
 	}
 	
 	public void actionPerformed(ActionEvent arg0) {
 		player.update();
 		wall.update();
-		
 		    
-	for (int i = 0; i <walls.size(); i++) {
-		wall tempwall = walls.get(i);
-		tempwall.update();
-	}
+		for (int i = 0; i <walls.size(); i++) {
+			wall tempwall = walls.get(i);
+			tempwall.update();
+		}
+			
+		for (int i = 0; i < enemies.size(); i++) {
+				Enemy tempEnemy = enemies.get(i);
+				tempEnemy.update();
+		}
 		
-	for (int i = 0; i < enemies.size(); i++) {
-			Enemy tempEnemy = enemies.get(i);
-			tempEnemy.update();
-}
-		
-	for (int i = 0; i <missiles.size(); i++) {
-			missile m = missiles.get(i);
-			m.update();		
-}
-			checkEnd();
-		
-			repaint();	
-}	
+		for (int i = 0; i <missiles.size(); i++) {
+				missile m = missiles.get(i);
+				m.update();		
+		}
+				checkEnd();
+				repaint();	
+	}	
 		
 	public static void addEnemy(Enemy e) {
 		enemies.add(e);
-}
+	}
 	
 	public static void removeEnemy(Enemy e) {
-		enemies.remove(e);
-		
-}
+		enemies.remove(e);	
+	}
 	
 	public static ArrayList<Enemy> getEnemyList() {
 		return enemies;
-		
-}
+	}
 	
 	public static void addmissile(missile m) {
 		missiles.add(m);
-}
+	}
 	
 	public static void removemissile(missile m) {
-		missiles.remove(m);
-		
-}
+		missiles.remove(m);		
+	}
 	
 	public static ArrayList<missile> getmissileList() {
 		return missiles;
-		
-}
-
-	public static void addwall(wall w) {
-	walls.add(w);
-}
-
-	public static void removewall(wall w) {
-	walls.remove(w);
-	
-}
-
-public static ArrayList<wall> getwallList() {
-	return walls;
-	
-}
+	}
 
 	public void startgame() {
 		enemyCount = level * 6;
 		
 		for (int i = 0; i < enemyCount; i++) {
 			addEnemy(new Enemy(rand.nextInt(500), -10 + -rand.nextInt(700)));
-			
 		}
-}
+	}
 	
 	public void checkEnd() {
 		if (enemies.size() == 0) {

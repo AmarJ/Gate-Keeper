@@ -12,24 +12,22 @@ public class wall extends Entity {
 
 	public wall(int x, int y) {
 		super(x, y);
-		
-}
+	}
 		
 	public void update() {
-		checkCollision();
-				
-}
+		checkCollision();				
+	}
 			
 	public void draw(Graphics2D g2d) {
 		g2d.drawImage(getwallImg(), x, y, null);
 		g2d.draw(getBounds());
-}
+	}
 			
 	public Image getwallImg() {
 		ImageIcon ic = new ImageIcon("images/wall.png");
-		return ic.getImage();
-					
-}
+		return ic.getImage();				
+	}
+	
 	public void checkCollision() {
 		ArrayList<Enemy> enemies = Game_Frame.getEnemyList();
 		
@@ -45,10 +43,8 @@ public class wall extends Entity {
 
 	public Rectangle getBounds() {
 		return new Rectangle(x, y, getwallImg().getWidth(null),
-		getwallImg().getHeight(null));      
-			
-}
-
+		getwallImg().getHeight(null));      		
 	}
+}
 
 			

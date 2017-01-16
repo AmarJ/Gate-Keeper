@@ -6,8 +6,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class wall extends Entity {
-
-
+	
 	public static int size;
 
 	public wall(int x, int y) {

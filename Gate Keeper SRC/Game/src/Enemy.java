@@ -11,7 +11,6 @@ public class Enemy extends Entity {
 	public Enemy(int x, int y) {
 		super(x, y);
 		startY = y;
-
 	}
 	  
 	public void update() {
@@ -29,7 +28,6 @@ public class Enemy extends Entity {
 	public Image getEnemyImg() {
 		ImageIcon ic = new ImageIcon("images/enemy.png");
 		return ic.getImage();
-		
 	}
 			
 	public void checkCollisions() {
@@ -39,7 +37,6 @@ public class Enemy extends Entity {
 			if (getBounds().intersects(m.getBounds())) {
 				Game_Frame.removeEnemy(this);
 				Game_Frame.removemissile(m);
-				
 			}
 		}
 	}
@@ -54,5 +51,4 @@ public class Enemy extends Entity {
 		return new Rectangle(x, y, getEnemyImg().getWidth(null), 
 				getEnemyImg().getHeight(null));
 	}
-	
-		}
+}

@@ -36,7 +36,6 @@ public class Game_Frame extends JPanel implements ActionListener {
 		mainTimer.start();
 		
 		startgame();
-		
 	}
 				
 	public void paint(Graphics g) {
